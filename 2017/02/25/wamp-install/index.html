@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>wamp 环境安装 | He110&#39;s Blog</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="PHP 新手专享(详细到哭，就差录视频了)">
+<meta name="keywords" content="php,环境配置,wamp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wamp 环境安装">
+<meta property="og:url" content="https://www.he110.top/2017/02/25/wamp-install/index.html">
+<meta property="og:site_name" content="He110&#39;s Blog">
+<meta property="og:description" content="PHP 新手专享(详细到哭，就差录视频了)">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-06-20T02:17:08.083Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="wamp 环境安装">
+<meta name="twitter:description" content="PHP 新手专享(详细到哭，就差录视频了)">
+  
+    <link rel="alternative" href="/atom.xml" title="He110&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">He110</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Blog/" style="font-size: 13.33px;">Blog</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Debian/" style="font-size: 10px;">Debian</a> <a href="/tags/GithubPages/" style="font-size: 10px;">GithubPages</a> <a href="/tags/ICO/" style="font-size: 10px;">ICO</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/lamp/" style="font-size: 10px;">lamp</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/rewrite/" style="font-size: 10px;">rewrite</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/wamp/" style="font-size: 10px;">wamp</a> <a href="/tags/一键评教/" style="font-size: 10px;">一键评教</a> <a href="/tags/优惠/" style="font-size: 10px;">优惠</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/公益/" style="font-size: 10px;">公益</a> <a href="/tags/取随机数/" style="font-size: 10px;">取随机数</a> <a href="/tags/后台接口/" style="font-size: 10px;">后台接口</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/学生/" style="font-size: 10px;">学生</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a> <a href="/tags/感悟/" style="font-size: 10px;">感悟</a> <a href="/tags/教务系统/" style="font-size: 10px;">教务系统</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/校园网/" style="font-size: 10px;">校园网</a> <a href="/tags/正方/" style="font-size: 10px;">正方</a> <a href="/tags/油猴脚本/" style="font-size: 10px;">油猴脚本</a> <a href="/tags/环境配置/" style="font-size: 13.33px;">环境配置</a> <a href="/tags/电信/" style="font-size: 10px;">电信</a> <a href="/tags/破解/" style="font-size: 10px;">破解</a> <a href="/tags/笔记/" style="font-size: 16.67px;">笔记</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编码转换/" style="font-size: 10px;">编码转换</a> <a href="/tags/编程建议/" style="font-size: 10px;">编程建议</a> <a href="/tags/脚本/" style="font-size: 13.33px;">脚本</a> <a href="/tags/自学/" style="font-size: 10px;">自学</a> <a href="/tags/致新生/" style="font-size: 10px;">致新生</a> <a href="/tags/诗歌/" style="font-size: 13.33px;">诗歌</a> <a href="/tags/资源检索/" style="font-size: 10px;">资源检索</a> <a href="/tags/闲情逸致/" style="font-size: 13.33px;">闲情逸致</a> <a href="/tags/音频解码/" style="font-size: 10px;">音频解码</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">He110</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">He110</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-wamp-install" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/25/wamp-install/" class="article-date">
+  	<time datetime="2017-02-25T11:30:25.000Z" itemprop="datePublished">2017-02-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      wamp 环境安装
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wamp/">wamp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/环境配置/">环境配置</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/php/">php</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="安装前的准备"><a href="#安装前的准备" class="headerlink" title="安装前的准备"></a>安装前的准备</h1><ul>
+<li>查看本机的类型(<code>x86/x64</code>, 即 32 位还是 64 位)</li>
+<li>安装好 <code>VC9/VC11/VC14</code> 运行库其中一个(需要按照本机的类型选择安装)</li>
+<li>创建好一个安装路径用于安装整套 wamp 环境(我使用的是 <code>D:/tools/LAMP</code>)</li>
+</ul>
+<a id="more"></a>
+<h1 id="安装-Apache"><a href="#安装-Apache" class="headerlink" title="安装 Apache"></a>安装 <code>Apache</code></h1><p>如果使用官方提供的 <code>Apache</code> 关联 <code>PHP</code> 组件的话, <code>PHP</code> 的版本会限制 <code>Apache</code> 的版本, 所以需要根据要配置的 <code>PHP</code> 版本选择下载的<code>Apache</code> 版本, 我使用的是 <code>Apache2.4</code>&nbsp;+&nbsp;<code>PHP5.6</code> 版</p>
+<p>现在 <code>Apache</code> 官方提供的 <code>Apache</code> 是绿色版, 也就意味着不能简单的下一步完成安装, 需要对环境变量以及配置文件进行修改</p>
+<ol>
+<li>下载完后将其解压至 <code>D:/tools/LAMP/Apache24</code> 目录下(目录可以随意修改, 但要记住在哪)</li>
+<li>右键<code>我的电脑——属性——高级设置——环境变量</code>, 在 <strong>系统变量</strong>处寻找 <code>Path</code> 变量, 编辑, 在 <strong>最尾处</strong>添加 <code>;D:/tools/LAMP/Apache24/bin</code>, 建议先复制出来, 在记事本中修改, 编辑好后保存(如果是 <code>Win10</code> 请删除 <code>;</code>, 然后点击新建, 贴在那里)</li>
+<li>打开 <code>D:/tools/LAMP/Apache24/conf/httpd.conf</code> 文件, 这是 <code>Apache</code> 的配置文件, 搜索 <code>ServerRoot</code>, 这是 <code>Apache</code> 的所在路径, 需要修改成你的 <code>Apache</code> 所在路径</li>
+<li>在刚才的文件中查找 <code>DocumentRoot</code>, 这是网站的根目录设置, 默认是 <code>c:/Apache24/htdocs</code>, 我修改成了 <code>D:/wwwroot</code>, 你也可以选择使用 <code>Apache</code> 目录下的 <code>htdocs</code> 文件夹作为根目录, 个人比较习惯用 <code>wwwroot</code>, 下面一行的 <code>&lt;Directory &quot;c:/Apache24/htdocs&quot;&gt;</code> 也要做相应的更改, 我的就是 <code>&lt;Directory &quot;D:/wwwroot&quot;&gt;</code></li>
+<li>查找到 <code>#ServerName www.example.com:80</code>, 将前面的注释符号 <code>#</code> 去掉。</li>
+<li>查找到 <code>DirectoryIndex</code>, 把它改成 <code>DirectoryIndex index.</code>php<code>index.html index.html</code>。这样, 你的网站目录的默认首页就是 <code>index.php</code>, 如果没有 <code>index.php</code> 系统会自动寻找 <code>index.html</code> 做为默认首页了。修改时要注意空格！！！</li>
+<li>打开运行(<code>win + R</code>)输入 <code>cmd</code>, 回车, 输入: <code>httpd -k install -n Apache24</code>, 即可给 <code>Apache</code> 注册服务, 可以让其开机自动启动, 其中 <code>Apache24</code> 是服务名, 可以随意更改, 只要是合法的就行</li>
+<li>在刚才的界面中输入 <code>httpd -k start</code> 开启 <code>Apache</code> 服务, 如果打开失败可能是端口占用, 如果不嫌麻烦可以重启电脑, 如果想以后每次都使用其他端口, 可以在 httpd.conf 文件中修改, 搜索 <code>Listen</code>, 后面的数字就是端口号, 只要是合法的即可, 如果端口号不是 <code>80</code>, 请记住 <strong>每次访问本地服务器时都要加上端口号</strong>, 例如端口为 8080: <code>127.0.0.1:8080</code></li>
+<li>打开浏览器, 输入 <code>127.0.0.1</code>, 如果显示的是 <code>It Work</code>, 则说明 <code>Apache</code> 安装成功</li>
+</ol>
+<h1 id="PHP-安装"><a href="#PHP-安装" class="headerlink" title="PHP 安装"></a><code>PHP</code> 安装</h1><p>现在的 <code>PHP</code> 也是绿色版, 也是需要修改配置文件, 我使用的是 <code>PHP5.6</code> 版, 先解压在安装路径处, 我选择的是解压在 <code>D:/tools/LAMP/PHP5.6</code></p>
+<ul>
+<li>找到 <code>D:/tools/LAMP/php5.6/php.ini-development</code> 文件, 复制一份并重命名为 <code>php.ini</code></li>
+<li>打开 <code>php.ini</code>, 找到 <code>; extension_dir = &quot;ext&quot;</code>, 此处的 <code>;</code> 是注释用, 直接去掉, 代表开启 <code>PHP</code> 扩展库</li>
+<li><p>打开 <code>Apache</code> 配置文件, 在任意位置(建议头部或尾部, 我添加在文件最后)添加以下语句:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">*********** php 与 Apache 关联***********</span></div><div class="line"><span class="meta">#</span><span class="bash">让 apache 载入 php 处理模块</span></div><div class="line">LoadModule php7_module D:/tools/LAMP/php5.6/php7apache2_4.dll</div><div class="line"><span class="meta">#</span><span class="bash">指定 php 的 ini 文件, 该文件是对 php 的一些配置, 千万不要给路径加双引号, 很多文章说要加, 结果一直报错, 取消了就好了</span></div><div class="line">PHPIniDir D:/tools/LAMP/php5.6/php.ini</div><div class="line">AddType application/x-httpd-php .php .phtml</div><div class="line"><span class="meta">#</span><span class="bash">************************************</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>打开运行(<code>win + R</code>), 输入 <code>cmd</code>, 回车, 输入 <code>httpd -k restart</code> 重启 <code>Apache</code> 服务</p>
+</li>
+<li>在网站根目录下新建文件 <code>index.php</code>, 输入<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">    phpinfo();</div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果显示的是 <code>PHP</code> 的相关信息, 则说明安装成功</p>
+<h1 id="MySQL-的安装"><a href="#MySQL-的安装" class="headerlink" title="MySQL 的安装"></a>MySQL 的安装</h1><p><code>MySQL 5.5</code> 版有 <code>windows</code> 用的 <code>msi</code> 安装包, 这是微软以前的安装包格式, 可以直接双击运行安装程序。</p>
+<ol>
+<li>双击 <code>MySQL</code> 安装包, 点击 <code>Next</code></li>
+<li>选中 <code>I accept the terms in the License Agreement</code>, 点击 <code>Next</code>。进入 <code>Choose Setup Type</code>(选择安装选项), 有三种: <code>Typical</code>(典型), <code>Custom</code>(自定义) , <code>Complete</code>(完全)。这里我们选 <code>Custom</code>, 然后点击 <code>Next</code></li>
+<li><code>Custom Setup</code>(自定义安装设置), 这里依然点击倒三角选择 <code>Entire feature will be installed on local hard drive</code> 把所有的全部安装上去, 然后点击下面的 <code>Change</code> 按钮, 选择安装位置后, 点击 <code>Next</code>。<strong>注意</strong>: 一定要检查所有选项安装位置, 最好都装在同一个位置。此处共有&nbsp;6&nbsp;个条目, 但只需更改第&nbsp;1&nbsp;个和第&nbsp;6&nbsp;个的安装位置, 其它条目会自动调整过去的。(<strong>建议新手可以不做更改</strong>)</li>
+<li><code>Ready to Install the Program</code> (准备安装程序), 观察中间的设置, 确定无误后, 点击 <code>Next</code>, 否则, 点击 <code>Back</code> 后修改</li>
+<li>在安装的过程中会出现一个新窗口, 是给 <code>MySQL Enterprise</code>(MySQL企业版)打广告的, 忽视掉, 一直 <code>Next</code>, 点的慢些, 直到出现 <code>Finish</code> 界面。<strong>注意</strong>: 此时先看下一条, 不要乱点</li>
+<li><code>Wizard Complete</code>(安装向导完成), 点击<code>Launch the MySQL Instance Configuration Wizard</code>(启动mysql配置向导)前面的复选框(默认是勾选), 然后点击 <code>Finish</code>, 这样就进入了 <code>MySQL</code> 配置界面</li>
+<li>不用说, 点击 <code>Next</code></li>
+<li>选择配置方式(<code>Please select a configuration type</code>)。这里出现了两种选项, 一种是 <code>Detailed Configuration</code>(详细配置), 一种是 <code>Stardard Configuration</code>(标准配置), 这里我们选择 <code>Detailed Configuration</code>, 然后点击 <code>Next</code></li>
+<li>选择服务器类型(<code>Please select a server type</code>)。有三种选项: <code>Developer Machine</code>(开发测试用), <code>Server Machine</code>(服务器用),<code>Dedicated MySQL Server Machine</code>(专门的服务器用), 由于我是用来开发的, 所以选择了第一项, 然后点击 <code>Next</code></li>
+<li>选择数据库用途(<code>Please select a database usage</code>)。有三种: 第一种是 <code>Multifuctional Database</code>, 第二种是 <code>Transactional Database Only</code>, 第三种是 <code>Non-Transactional Database Only</code>, 这儿三个选项的区别我也不怎么理解, 但依照英文注释以及网上其他的帖子参考就选择了第一项 <code>Multifuctional Database</code>, 然后点击 <code>Next</code></li>
+<li>选择 <code>InnoDB</code> 数据库文件存储位置(<code>Please select the drive for the InnoDB datafile</code>), 默认是安装的 <code>MySQL</code> 位置。我保持默认, 直接点击 <code>Next</code></li>
+<li>选择同时连接到服务器的准确访问量(<code>Please set the approximate number of concurrent connections to the server</code>)。三个选项: 第一个是 <code>Decision Support(DSS)/OLAP</code>(大约20个), 第二个是 <code>Online Transaction Processing(OLTP)</code>(大约500个), 第三个是 <code>Manual Settings</code>(手动设置), 由于我是为了开发测试用, 所以选择第一个就可以了, 然后点击 <code>Next</code></li>
+<li>网络选项(<code>Please select the networking options</code>)。第一个是是否启用 <code>TCP/IP</code> 连接, 选上, 第二个是启用严格模式(<code>Enable Strict Mode</code>), 我选了, 建议新手选上, 这样有助于规范代码, 然后点击 <code>Next</code></li>
+<li>选择默认字符集(<code>Please select the character set</code>)。第一个是 <code>Stardard Character Set</code>(标准字符集), 默认是 <code>Latin1</code>, 适合存储英文；第二个是 <code>Best Support for Multilingualism</code>(最适合多语言), 默认是 <code>utf8</code>, 适合存储多语言字符集；第三个是手动选择。这里我们选择 <code>UTF8</code> 编码, 即选择第二种或者第三种中的 <code>UTF8</code>, 然后点击 <code>Next</code></li>
+<li>设置 <code>windows</code> 选项(<code>Please set the windows options</code>)。第一项是是否安装为 <code>Windows</code> 服务(<code>Install As Windows Service</code>), 建议勾选上, 下面的 <code>Service Name</code> 是服务器标识名称, 默认即可, 还有个是否开机自动启动 <code>MySQL</code> 的选项, 如果没选的话, 以后开启 <code>MySQL</code> 需要在 <code>cmd</code> 中输入<code>net start mysql</code>。第二项是是否把 <code>bin</code> 文件夹路径加入环境变量中的 <code>Path</code>(<code>Include Bin Directory in Windows PATH</code>), 建议勾选, 这样以后可以直接在 <code>cmd</code> 上输入 <code>bin</code> 文件夹上的任意一个文件使用, 然后点击 <code>Next</code></li>
+<li>安全选项(<code>Please set the security options</code>)。第一项是修改安全设置(<code>Modify Security Settings</code>), 这项中的两项分别是新 <code>root</code> 密码和确认输入的密码(即再输入一遍), 最下面的是创建一个匿名帐号(<code>Create An Anonymous Account</code>), 先选上, 回头安装完记得去除, 然后点击 <code>Next</code></li>
+<li>准备执行刚才的设置(<code>Ready to execute</code>), 确定无误后, 点击 <code>Execute</code>。过一会执行完成后, 点击 <code>Finish</code> 结束设置</li>
+<li>打开 <code>mysql</code> 的安装文件夹, 在 <code>bin</code> 文件夹内找到 <code>libmysql.dll</code>, 将其拷贝到系统的 <code>system32</code> 文件夹中。如果没有找到就是安装程序已经帮你拷贝好了, 不用管</li>
+<li>在 <code>php</code> 的配置文件里, 分别搜索 <code>;extension=php_gd2.dll</code>、<code>;extension=php_mysql.dll</code>、<code>;extension=php_mysqli.dll</code> 并将前面的 <code>;</code> 都去掉, 开启扩展</li>
+</ol>
+<h1 id="phpMyAdmin-配置"><a href="#phpMyAdmin-配置" class="headerlink" title="phpMyAdmin 配置"></a><code>phpMyAdmin</code> 配置</h1><p>因为 <code>phpMyAdmin</code> 的版本和 <code>php</code> 的版本有关系, 所以建议不要下载太旧的版本, 会出错, 我使用的是 <code>phpMyAdmin 4.0.10.17</code>, 可以兼容 <code>PHP5.6</code></p>
+<ol>
+<li>下载完毕直接解压在网站的根目录下, 我解压在 <code>D:/wwwroot/phpMyAdmin</code> 目录下</li>
+<li>找到 <code>D:/wwwroot/phpMyAdmin/libraries/config.default.php</code>, 打开后配置 <code>$cfg[&#39;Servers&#39;][$i][&#39;password&#39;] = &#39;新密码&#39;;</code></li>
+<li>打开运行(<code>win + R</code>), 输入 <code>cmd</code>, 回车, 输入 <code>httpd -k restart</code> 重启 <code>Apache</code> 服务</li>
+<li>打开浏览器, 输入: <code>127.0.0.1/phpmyadmin</code>, 根据刚才配置的账号密码登陆(账号默认是 <code>root</code>) 即可</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/02/28/diy404/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          记本站公益 404 配置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/23/php001/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP 笔记整理(一)——面向过程编程</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="wamp-install" data-title="wamp 环境安装" data-url="https://www.he110.top/2017/02/25/wamp-install/"  data-images="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" data-content="wamp 环境安装">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2017 He110
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

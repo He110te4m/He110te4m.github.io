@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>markdown 参考手册 | He110&#39;s Blog</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="经常用到 markdown 书写手册/论文什么的，故写了这篇文章方便以后查找语法用~">
+<meta name="keywords" content="markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown 参考手册">
+<meta property="og:url" content="https://www.he110.top/2017/05/07/markdown/index.html">
+<meta property="og:site_name" content="He110&#39;s Blog">
+<meta property="og:description" content="经常用到 markdown 书写手册/论文什么的，故写了这篇文章方便以后查找语法用~">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://hdiot.site/image/logo.png">
+<meta property="og:updated_time" content="2017-06-20T02:16:27.063Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="markdown 参考手册">
+<meta name="twitter:description" content="经常用到 markdown 书写手册/论文什么的，故写了这篇文章方便以后查找语法用~">
+<meta name="twitter:image" content="http://hdiot.site/image/logo.png">
+  
+    <link rel="alternative" href="/atom.xml" title="He110&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">He110</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Blog/" style="font-size: 13.33px;">Blog</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Debian/" style="font-size: 10px;">Debian</a> <a href="/tags/GithubPages/" style="font-size: 10px;">GithubPages</a> <a href="/tags/ICO/" style="font-size: 10px;">ICO</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/lamp/" style="font-size: 10px;">lamp</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/rewrite/" style="font-size: 10px;">rewrite</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/wamp/" style="font-size: 10px;">wamp</a> <a href="/tags/一键评教/" style="font-size: 10px;">一键评教</a> <a href="/tags/优惠/" style="font-size: 10px;">优惠</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/公益/" style="font-size: 10px;">公益</a> <a href="/tags/取随机数/" style="font-size: 10px;">取随机数</a> <a href="/tags/后台接口/" style="font-size: 10px;">后台接口</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/学生/" style="font-size: 10px;">学生</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a> <a href="/tags/感悟/" style="font-size: 10px;">感悟</a> <a href="/tags/教务系统/" style="font-size: 10px;">教务系统</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/校园网/" style="font-size: 10px;">校园网</a> <a href="/tags/正方/" style="font-size: 10px;">正方</a> <a href="/tags/油猴脚本/" style="font-size: 10px;">油猴脚本</a> <a href="/tags/环境配置/" style="font-size: 13.33px;">环境配置</a> <a href="/tags/电信/" style="font-size: 10px;">电信</a> <a href="/tags/破解/" style="font-size: 10px;">破解</a> <a href="/tags/笔记/" style="font-size: 16.67px;">笔记</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编码转换/" style="font-size: 10px;">编码转换</a> <a href="/tags/编程建议/" style="font-size: 10px;">编程建议</a> <a href="/tags/脚本/" style="font-size: 13.33px;">脚本</a> <a href="/tags/自学/" style="font-size: 10px;">自学</a> <a href="/tags/致新生/" style="font-size: 10px;">致新生</a> <a href="/tags/诗歌/" style="font-size: 13.33px;">诗歌</a> <a href="/tags/资源检索/" style="font-size: 10px;">资源检索</a> <a href="/tags/闲情逸致/" style="font-size: 13.33px;">闲情逸致</a> <a href="/tags/音频解码/" style="font-size: 10px;">音频解码</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">He110</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">He110</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-markdown" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/07/markdown/" class="article-date">
+  	<time datetime="2017-05-07T07:14:56.000Z" itemprop="datePublished">2017-05-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      markdown 参考手册
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/markdown/">markdown</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown"></a>什么是 Markdown</h2><p>Markdown&nbsp;是一种轻量级标记语言，目标是实现「易读易写」，不需要不断的选中文本——调整格式，而是预设好了一份模板交给用户自行使用，我们需要的就是按照&nbsp;Markdown&nbsp;的语法，告诉&nbsp;Markdown&nbsp;哪里是标题，哪里是链接，哪里是图片等等</p>
+<a id="more"></a>
+<h2 id="为什么要用-Markdown"><a href="#为什么要用-Markdown" class="headerlink" title="为什么要用 Markdown"></a>为什么要用 Markdown</h2><ul>
+<li>纯文本，所以兼容性极强，可以用所有文本编辑器打开。</li>
+<li>让你专注于文字而不是排版。</li>
+<li>格式转换方便，Markdown&nbsp;的文本你可以轻松转换为&nbsp;html、电子书等。</li>
+<li>Markdown&nbsp;的标记语法有极好的可读性。</li>
+</ul>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>在&nbsp;Markdown&nbsp;中，存在着&nbsp;6&nbsp;种标题，从大到小我们分别定义为：h1、h2、h3、h4、h5、h6，也就是一号标题、二号标题…六号标题，与&nbsp;Word&nbsp;文档中的标题对应，用法如下：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="section"># 一级标题</span></div><div class="line"><span class="section">## 二级标题</span></div><div class="line"><span class="section">### 三级标题</span></div><div class="line"><span class="section">#### 四级标题</span></div><div class="line"><span class="section">##### 五级标题</span></div><div class="line"><span class="section">###### 六级标题</span></div></pre></td></tr></table></figure></p>
+<p>效果如下：</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>注：<code>#</code>&nbsp;和「标题」之间建议保留一个字符的空格&nbsp;(即英文半角空格)，这是最标准的&nbsp;Markdown&nbsp;写法。另外在标题后面可以跟着任意多个&nbsp;<code>#</code>，代表着标题结束，一般在结束的&nbsp;<code>#</code>&nbsp;前也会预留空格，如下：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="section"># 一级标题 #</span></div><div class="line"><span class="section">## 二级标题 ##</span></div><div class="line"><span class="section">### 三级标题 ###</span></div><div class="line"><span class="section">#### 四级标题 ####</span></div><div class="line"><span class="section">##### 五级标题 #####</span></div><div class="line"><span class="section">###### 六级标题 ######</span></div></pre></td></tr></table></figure></p>
+<p>标题还有另一种写法，也是&nbsp;Github&nbsp;上常见的写法，在一级标题下面一行加上&nbsp;<code>===</code>，在二级标题下面一行加上&nbsp;<code>---</code>，如下：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">一级标题</div><div class="line">===</div><div class="line">二级标题</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>效果如下：</p>
+<h1 id="一级标题-1"><a href="#一级标题-1" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="普通无序列表"><a href="#普通无序列表" class="headerlink" title="普通无序列表"></a>普通无序列表</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">- </span>列表文本前使用 [减号+空格]</div><div class="line"><span class="bullet">+ </span>列表文本前使用 [加号+空格]</div><div class="line"><span class="bullet">* </span>列表文本前使用 [星号+空格]</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<ul>
+<li>列表文本前使用 [减号+空格]</li>
+</ul>
+<ul>
+<li>列表文本前使用 [加号+空格]</li>
+</ul>
+<ul>
+<li>列表文本前使用 [星号+空格]</li>
+</ul>
+<h3 id="普通有序列表"><a href="#普通有序列表" class="headerlink" title="普通有序列表"></a>普通有序列表</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>列表前使用 [数字+空格]</div><div class="line"><span class="bullet">2. </span>我们会自动帮你添加数字</div><div class="line"><span class="bullet">7. </span>不用担心数字不对，显示的时候我们会自动把这行的 7 纠正为 3</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<ol>
+<li>列表前使用 [数字+空格]</li>
+<li>我们会自动帮你添加数字</li>
+<li>不用担心数字不对，显示的时候我们会自动把这行的 7 纠正为 3</li>
+</ol>
+<h3 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>列出所有元素：</div><div class="line"><span class="code">    - 无序列表元素 A</span></div><div class="line"><span class="code">        1. 元素 A 的有序子列表</span></div><div class="line"><span class="code">    - 前面加四个空格</span></div><div class="line"><span class="bullet">2. </span>列表里的多段换行：</div><div class="line"><span class="code">    前面必须加四个空格，</span></div><div class="line"><span class="code">    这样换行，整体的格式不会乱</span></div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<ol>
+<li>列出所有元素：<ul>
+<li>无序列表元素 A<ol>
+<li>元素 A 的有序子列表</li>
+</ol>
+</li>
+<li>前面加四个空格</li>
+</ul>
+</li>
+<li>列表里的多段换行：<br> 前面必须加四个空格，<br> 这样换行，整体的格式不会乱</li>
+</ol>
+<h3 id="列表里引用"><a href="#列表里引用" class="headerlink" title="列表里引用"></a>列表里引用</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="quote">&gt; 前面空一行</span></div><div class="line"><span class="quote">&gt; 仍然需要在 &gt;  前面加四个空格</span></div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<pre><code>&gt; 前面空一行
+&gt; 仍然需要在 &gt;  前面加四个空格
+</code></pre><h3 id="列表里代码段"><a href="#列表里代码段" class="headerlink" title="列表里代码段"></a>列表里代码段</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"> </div></pre></td></tr></table></figure>
+<pre><code>前面四个空格，之后按代码语法 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"> </div></pre></td></tr></table></figure>
+
+    或者直接空八个，引入代码块
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">效果如下：</div></pre></td></tr></table></figure>
+<pre><code>前面四个空格，之后按代码语法 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"> </div></pre></td></tr></table></figure>
+
+    或者直接空八个，引入代码块
+</code></pre><h2 id="粗斜体"><a href="#粗斜体" class="headerlink" title="粗斜体"></a>粗斜体</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="emphasis">*斜体文本*</span></div><div class="line"><span class="emphasis">_斜体文本_</span></div><div class="line"><span class="strong">**粗体文本**</span></div><div class="line"><span class="strong">__粗体文本__</span></div><div class="line"><span class="strong">***粗斜体文本**</span>*</div><div class="line"><span class="strong">___粗斜体文本__</span>_</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><em>斜体文本</em><br><em>斜体文本</em><br><strong>粗体文本</strong><br><strong>粗体文本</strong><br><strong><em>粗斜体文本</em></strong><br><strong><em>粗斜体文本</em></strong></p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="常用链接"><a href="#常用链接" class="headerlink" title="常用链接"></a>常用链接</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">文字链接：[<span class="string">数智科技</span>](<span class="link">http://hdiot.site</span>)</div><div class="line">网址链接：<span class="xml"><span class="tag">&lt;<span class="name">http:</span>//<span class="attr">hdiot.site</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p>文字链接：<a href="http://hdiot.site" target="_blank" rel="external">数智科技</a><br>网址链接：<a href="http://hdiot.site" target="_blank" rel="external">http://hdiot.site</a></p>
+<h3 id="高级链接"><a href="#高级链接" class="headerlink" title="高级链接"></a>高级链接</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">这个链接用 1 作为网址变量 [<span class="string">数智</span>][<span class="symbol">1</span>].</div><div class="line">这个链接用 yahoo 作为网址变量 [<span class="string">数智科技</span>][<span class="symbol">sz</span>].</div><div class="line">然后在文档的结尾为变量赋值（网址）</div><div class="line"></div><div class="line">  [1]: http://hdiot.site/</div><div class="line">  [yahoo]: http://hdiot.site/</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p>这个链接用 1 作为网址变量 <a href="http://hdiot.site/image/logo.png" target="_blank" rel="external">数智</a>.<br>这个链接用 yahoo 作为网址变量 <a href="http://hdiot.site/" target="_blank" rel="external">数智科技</a>.<br>然后在文档的结尾为变量赋值（网址）</p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="常规图片"><a href="#常规图片" class="headerlink" title="常规图片"></a>常规图片</h3><p>跟链接的方法区别在于前面加了个感叹号 !，这样是不是觉得好记多了呢？<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![<span class="string">LOGO</span>](<span class="link">http://hdiot.site/image/logo.png</span>)</div></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img src="http://hdiot.site/image/logo.png" alt="LOGO"></p>
+<h3 id="高级图片"><a href="#高级图片" class="headerlink" title="高级图片"></a>高级图片</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">这个链接用 1 作为网址变量 [<span class="string">数智 LOGO</span>][<span class="symbol">1</span>].</div><div class="line">然后在文档的结尾位变量赋值（网址）</div><div class="line"></div><div class="line"> [1]: http://hdiot.site/image/logo.png</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p>这个链接用 1 作为网址变量 <a href="http://hdiot.site/image/logo.png" target="_blank" rel="external">数智 LOGO</a>.<br>然后在文档的结尾位变量赋值（网址）</p>
+<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>如果另起一行，只需在当前行结尾加&nbsp;2&nbsp;个空格<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">在当前行的结尾加 2 个空格</div><div class="line">这行就会新起一行</div></pre></td></tr></table></figure></p>
+<p>如果是要起一个新段落，只需要空出一行即可</p>
+<h2 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h2><p>如果你有写分割线的习惯，可以新起一行输入三个减号&nbsp;<code>-</code>。当前后都有段落时，与段落间要空出一行，否则会当做二号标题：<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">前面的段落</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">后面的段落</div></pre></td></tr></table></figure></p>
+<p>效果如下：</p>
+<p>前面的段落</p>
+<hr>
+<p>后面的段落</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>如果你只想高亮语句中的某个函数名或关键字，可以使用 <figure class="highlight plain"><figcaption><span>``` 实现，如果需要高亮的是一大段代码的话，可以这么写：</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">```c</div><div class="line">printf(&quot;%s&quot;, &quot;Hello world&quot;);</div></pre></td></tr></table></figure></p>
+<p>效果如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">printf</span>(<span class="string">"%s"</span>, <span class="string">"Hello world"</span>);</div></pre></td></tr></table></figure></p>
+<p>Markdown&nbsp;的语法高亮支持大多数语言，常见的语言基本都支持，如果需要指定代码的语法，可以把&nbsp;c&nbsp;换成要显示的语言名字，如：<code>php</code>、<code>sh</code>&nbsp;等，除此之外，还可以使用&nbsp;四个空格&nbsp;缩进，和使用&nbsp;<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">```markdown</div><div class="line">    # 缩进使用 4 个空格，语法高亮交由 Markdown 引擎自动识别</div><div class="line">    sudo apt-get ipdate</div></pre></td></tr></table></figure></p>
+<p>效果如下：</p>
+<pre><code># 缩进使用 4 个空格，语法高亮交由 Markdown 引擎自动识别
+sudo apt-get ipdate
+</code></pre><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><h3 id="普通引用"><a href="#普通引用" class="headerlink" title="普通引用"></a>普通引用</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="quote">&gt; 引用文本前使用 [大于号+空格]</span></div><div class="line"><span class="quote">&gt; 折行可以不加，新起一行都要加上</span></div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<blockquote>
+<p>引用文本前使用 [大于号+空格]<br>折行可以不加，新起一行都要加上</p>
+</blockquote>
+<h3 id="引用里嵌套引用"><a href="#引用里嵌套引用" class="headerlink" title="引用里嵌套引用"></a>引用里嵌套引用</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="quote">&gt; 最外层引用</span></div><div class="line"><span class="quote">&gt; &gt; 多一个 &gt; 嵌套一层引用</span></div><div class="line"><span class="quote">&gt; &gt; &gt; 理论上可以嵌套无穷多层</span></div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<blockquote>
+<p>最外层引用</p>
+<blockquote>
+<p>多一个 &gt; 嵌套一层引用</p>
+<blockquote>
+<p>理论上可以嵌套无穷多层</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="引用里嵌套列表"><a href="#引用里嵌套列表" class="headerlink" title="引用里嵌套列表"></a>引用里嵌套列表</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="quote">&gt; - 这是引用里嵌套的一个列表</span></div><div class="line"><span class="quote">&gt; - 还可以有子列表</span></div><div class="line"><span class="quote">&gt;     * 子列表需要从 - 之后延后四个空格开始</span></div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<blockquote>
+<ul>
+<li>这是引用里嵌套的一个列表</li>
+<li>还可以有子列表<ul>
+<li>子列表需要从 - 之后延后四个空格开始</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="引用里嵌套代码块"><a href="#引用里嵌套代码块" class="headerlink" title="引用里嵌套代码块"></a>引用里嵌套代码块</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="quote">&gt;     同样的，在前面加四个空格形成代码块</span></div><div class="line">&gt;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>或者使用 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">效果如下：</div><div class="line"></div><div class="line">&gt;     同样的，在前面加四个空格形成代码块</div><div class="line">&gt;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>或者使用 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt;</div></pre></td></tr></table></figure></p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/20/day/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          生活随感
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/02/raspberry-pi-lnmp/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">树莓派搭建 lnmp 环境并映射外网</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="markdown" data-title="markdown 参考手册" data-url="https://www.he110.top/2017/05/07/markdown/"  data-images="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" data-content="markdown 参考手册">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2017 He110
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Chrome 鼠标点击页面特效脚本分享 | He110&#39;s Blog</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="每天都是无聊的点击着网页查资料，突发奇想做一个鼠标点击特效吧~这样就不会无聊了">
+<meta name="keywords" content="js,油猴脚本,脚本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chrome 鼠标点击页面特效脚本分享">
+<meta property="og:url" content="https://www.he110.top/2017/07/12/click/index.html">
+<meta property="og:site_name" content="He110&#39;s Blog">
+<meta property="og:description" content="每天都是无聊的点击着网页查资料，突发奇想做一个鼠标点击特效吧~这样就不会无聊了">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-07-12T13:32:07.030Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chrome 鼠标点击页面特效脚本分享">
+<meta name="twitter:description" content="每天都是无聊的点击着网页查资料，突发奇想做一个鼠标点击特效吧~这样就不会无聊了">
+  
+    <link rel="alternative" href="/atom.xml" title="He110&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">He110</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Blog/" style="font-size: 13.33px;">Blog</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Debian/" style="font-size: 10px;">Debian</a> <a href="/tags/GithubPages/" style="font-size: 10px;">GithubPages</a> <a href="/tags/ICO/" style="font-size: 10px;">ICO</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/lamp/" style="font-size: 10px;">lamp</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/rewrite/" style="font-size: 10px;">rewrite</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/wamp/" style="font-size: 10px;">wamp</a> <a href="/tags/一键评教/" style="font-size: 10px;">一键评教</a> <a href="/tags/优惠/" style="font-size: 10px;">优惠</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/公益/" style="font-size: 10px;">公益</a> <a href="/tags/取随机数/" style="font-size: 10px;">取随机数</a> <a href="/tags/后台接口/" style="font-size: 10px;">后台接口</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/学生/" style="font-size: 10px;">学生</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a> <a href="/tags/感悟/" style="font-size: 10px;">感悟</a> <a href="/tags/教务系统/" style="font-size: 10px;">教务系统</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/校园网/" style="font-size: 10px;">校园网</a> <a href="/tags/正方/" style="font-size: 10px;">正方</a> <a href="/tags/油猴脚本/" style="font-size: 10px;">油猴脚本</a> <a href="/tags/环境配置/" style="font-size: 13.33px;">环境配置</a> <a href="/tags/电信/" style="font-size: 10px;">电信</a> <a href="/tags/破解/" style="font-size: 10px;">破解</a> <a href="/tags/笔记/" style="font-size: 16.67px;">笔记</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编码转换/" style="font-size: 10px;">编码转换</a> <a href="/tags/编程建议/" style="font-size: 10px;">编程建议</a> <a href="/tags/脚本/" style="font-size: 13.33px;">脚本</a> <a href="/tags/自学/" style="font-size: 10px;">自学</a> <a href="/tags/致新生/" style="font-size: 10px;">致新生</a> <a href="/tags/诗歌/" style="font-size: 13.33px;">诗歌</a> <a href="/tags/资源检索/" style="font-size: 10px;">资源检索</a> <a href="/tags/闲情逸致/" style="font-size: 13.33px;">闲情逸致</a> <a href="/tags/音频解码/" style="font-size: 10px;">音频解码</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">He110</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">He110</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-click" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/07/12/click/" class="article-date">
+  	<time datetime="2017-07-12T13:05:45.000Z" itemprop="datePublished">2017-07-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Chrome 鼠标点击页面特效脚本分享
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/油猴脚本/">油猴脚本</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/脚本/">脚本</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/脚本/">脚本</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>每天都是无聊的点击着网页查资料<br>但是生活总该自己制造点惊喜不是么？<br>于是突发奇想做一个鼠标点击特效~<br>这样就不会无聊了~<br>壮哉我颜文字~</p>
+<a id="more"></a>
+<p>可以直接安装油猴的插件，油猴插件的作用就是在指定网页自动加载指定 JS 脚本，用处很多，比如去广告、解析下载地址、破解 VIP 视频等等，如果是在 Firefox 浏览器中，甚至还能修改 Firefox 浏览器的外观</p>
+<p>代码会附在文末，这里挑几句代码解释下就完了~应该挺容易懂的，学过 jQuery 就能做</p>
+<p>在油猴脚本里，不会直接引用 jQuery 库，而是使用这样一条语句调用 jQuery 中的函数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</div><div class="line">    <span class="comment">// 书写 jQuery 代码</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>获取用户点击的坐标，在这里用了一个小技巧，因为用户点击的元素很多，可能是 button、input、p、div、table 等等，所以为了给整个页面添加效果，可以给 html 或者 body 添加点击事件，在这里我选择给 html 注册点击事件：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"html"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="comment">// 获取 X 坐标</span></div><div class="line">    e.pageX</div><div class="line">    <span class="comment">// 获取 Y 坐标</span></div><div class="line">    e.pageY</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>下面是完整代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// @name         鼠标点击特效</span></div><div class="line"><span class="comment">// @version      1.0</span></div><div class="line"><span class="comment">// @description  生活总该自己制造点惊喜不是么？</span></div><div class="line"><span class="comment">// @author       He110</span></div><div class="line"><span class="comment">// @include      /^https?\:\/\/[^\s]*/</span></div><div class="line"><span class="comment">// @grant        GM_addStyle</span></div><div class="line"><span class="comment">// @require      https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js</span></div><div class="line"><span class="comment">// @run-at       document_start</span></div><div class="line"><span class="comment">// @grant        unsafeWindow</span></div><div class="line"></div><div class="line"><span class="comment">// 使用匿名函数~</span></div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 记录点击次数</span></div><div class="line">    <span class="keyword">var</span> click_num = <span class="number">0</span>;</div><div class="line">    <span class="comment">// 调用 jQuery 为网页注册点击事件</span></div><div class="line">    jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</div><div class="line">        <span class="comment">// 同样点击后调用一个匿名函数</span></div><div class="line">        $(<span class="string">"html"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">            <span class="comment">// 设置颜文字字体大小</span></div><div class="line">            <span class="keyword">var</span> n = <span class="number">18</span>;</div><div class="line">            <span class="comment">// 记录要显示的文本</span></div><div class="line">            <span class="keyword">var</span> $i;</div><div class="line">            <span class="comment">// 点击次数 +1</span></div><div class="line">            click_num++;</div><div class="line">            <span class="comment">// 根据点击次数加载要显示的颜文字，也可以使用随机数，我直接使用固定的了，因为我一般的时间线是刚开始兴致勃勃，所以颜文字是比较开心的，后面开始烦躁了，跟实际情况还是挺像的~可以自己修改调整</span></div><div class="line">            <span class="keyword">if</span> (click_num == <span class="number">10</span>) &#123;</div><div class="line">                $i = $(<span class="string">"&lt;b&gt;&lt;/b&gt;"</span>).text(<span class="string">"OωO"</span>);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (click_num == <span class="number">20</span>) &#123;</div><div class="line">                $i = $(<span class="string">"&lt;b&gt;&lt;/b&gt;"</span>).text(<span class="string">"(๑•́ ∀ •̀๑)"</span>);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (click_num == <span class="number">30</span>) &#123;</div><div class="line">                $i = $(<span class="string">"&lt;b&gt;&lt;/b&gt;"</span>).text(<span class="string">"(๑•́ ₃ •̀๑)"</span>);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (click_num == <span class="number">40</span>) &#123;</div><div class="line">                $i = $(<span class="string">"&lt;b&gt;&lt;/b&gt;"</span>).text(<span class="string">"(๑•̀_•́๑)"</span>);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (click_num == <span class="number">50</span>) &#123;</div><div class="line">                $i = $(<span class="string">"&lt;b&gt;&lt;/b&gt;"</span>).text(<span class="string">"（￣へ￣）"</span>);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (click_num == <span class="number">60</span>) &#123;</div><div class="line">                $i = $(<span class="string">"&lt;b&gt;&lt;/b&gt;"</span>).text(<span class="string">"(╯°口°)╯(┴—┴"</span>);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (click_num == <span class="number">70</span>) &#123;</div><div class="line">                $i = $(<span class="string">"&lt;b&gt;&lt;/b&gt;"</span>).text(<span class="string">"૮( ᵒ̌皿ᵒ̌ )ა"</span>);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (click_num == <span class="number">80</span>) &#123;</div><div class="line">                $i = $(<span class="string">"&lt;b&gt;&lt;/b&gt;"</span>).text(<span class="string">"╮(｡&gt;口&lt;｡)╭"</span>);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (click_num == <span class="number">90</span>) &#123;</div><div class="line">                $i = $(<span class="string">"&lt;b&gt;&lt;/b&gt;"</span>).text(<span class="string">"( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃"</span>);</div><div class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (click_num &gt;= <span class="number">100</span> &amp;&amp; click_num &lt;= <span class="number">105</span>) &#123;</div><div class="line">                $i = $(<span class="string">"&lt;b&gt;&lt;/b&gt;"</span>).text(<span class="string">"(ꐦ°᷄д°᷅)"</span>);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="comment">// 如果没有达到颜文字显示的次数，则显示爱心桃~</span></div><div class="line">                $i = $(<span class="string">"&lt;b&gt;&lt;/b&gt;"</span>).text(<span class="string">"❤"</span>);</div><div class="line">                <span class="comment">// 将字体大小取随机数，用于设置做爱心桃的大小</span></div><div class="line">                n = <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random() * <span class="number">14</span> + <span class="number">6</span>);</div><div class="line">            &#125;</div><div class="line">            <span class="comment">// 获取点击的坐标</span></div><div class="line">            <span class="keyword">var</span> x = e.pageX,</div><div class="line">                y = e.pageY;</div><div class="line">            <span class="comment">// 设置 CSS，这个没什么好说的，可以自己修改</span></div><div class="line">            $i.css(&#123;</div><div class="line">                <span class="string">"z-index"</span>: <span class="number">9999</span>,</div><div class="line">                <span class="string">"top"</span>: y - <span class="number">20</span>,</div><div class="line">                <span class="string">"left"</span>: x,</div><div class="line">                <span class="string">"position"</span>: <span class="string">"absolute"</span>,</div><div class="line">                <span class="string">"color"</span>: <span class="string">"#E94F06"</span>,</div><div class="line">                <span class="string">"font-size"</span>: n,</div><div class="line">                <span class="string">"-moz-user-select"</span>: <span class="string">"none"</span>,</div><div class="line">                <span class="string">"-webkit-user-select"</span>: <span class="string">"none"</span>,</div><div class="line">                <span class="string">"-ms-user-select"</span>: <span class="string">"none"</span></div><div class="line">            &#125;);</div><div class="line">            <span class="comment">// 将颜文字/爱心桃显示出来</span></div><div class="line">            $(<span class="string">"body"</span>).append($i);</div><div class="line">            <span class="comment">// 颜文字/爱心桃向上移动 180px，移动 1500ms 后消失，也就是移动的过程设置要用 1500 毫秒完成，然后销毁这个标签</span></div><div class="line">            $i.animate(&#123;</div><div class="line">                <span class="string">"top"</span>: y - <span class="number">180</span>,</div><div class="line">                <span class="string">"opacity"</span>: <span class="number">0</span></div><div class="line">            &#125;, <span class="number">1500</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                $i.remove();</div><div class="line">            &#125;);</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/07/suggest/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          给 17 届新生的编程建议
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/27/miniprogram/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小程序录音另类解码 (原创)</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="click" data-title="Chrome 鼠标点击页面特效脚本分享" data-url="https://www.he110.top/2017/07/12/click/"  data-images="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" data-content="Chrome 鼠标点击页面特效脚本分享">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2017 He110
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

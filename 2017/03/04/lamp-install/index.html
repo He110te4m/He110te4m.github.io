@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>LAMP 环境配置 | He110&#39;s Blog</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="尝试了一下 LAMP 环境的配置，果然不愧是最适合 PHP 的开发环境">
+<meta name="keywords" content="php,环境配置,lamp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LAMP 环境配置">
+<meta property="og:url" content="https://www.he110.top/2017/03/04/lamp-install/index.html">
+<meta property="og:site_name" content="He110&#39;s Blog">
+<meta property="og:description" content="尝试了一下 LAMP 环境的配置，果然不愧是最适合 PHP 的开发环境">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://raw.githubusercontent.com/He110te4m/img/master/LAMP/1.jpg">
+<meta property="og:updated_time" content="2017-06-20T02:06:09.753Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LAMP 环境配置">
+<meta name="twitter:description" content="尝试了一下 LAMP 环境的配置，果然不愧是最适合 PHP 的开发环境">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/He110te4m/img/master/LAMP/1.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="He110&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">He110</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Blog/" style="font-size: 13.33px;">Blog</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Debian/" style="font-size: 10px;">Debian</a> <a href="/tags/GithubPages/" style="font-size: 10px;">GithubPages</a> <a href="/tags/ICO/" style="font-size: 10px;">ICO</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/lamp/" style="font-size: 10px;">lamp</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/rewrite/" style="font-size: 10px;">rewrite</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/wamp/" style="font-size: 10px;">wamp</a> <a href="/tags/一键评教/" style="font-size: 10px;">一键评教</a> <a href="/tags/优惠/" style="font-size: 10px;">优惠</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/公益/" style="font-size: 10px;">公益</a> <a href="/tags/取随机数/" style="font-size: 10px;">取随机数</a> <a href="/tags/后台接口/" style="font-size: 10px;">后台接口</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/学生/" style="font-size: 10px;">学生</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a> <a href="/tags/感悟/" style="font-size: 10px;">感悟</a> <a href="/tags/教务系统/" style="font-size: 10px;">教务系统</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/校园网/" style="font-size: 10px;">校园网</a> <a href="/tags/正方/" style="font-size: 10px;">正方</a> <a href="/tags/油猴脚本/" style="font-size: 10px;">油猴脚本</a> <a href="/tags/环境配置/" style="font-size: 13.33px;">环境配置</a> <a href="/tags/电信/" style="font-size: 10px;">电信</a> <a href="/tags/破解/" style="font-size: 10px;">破解</a> <a href="/tags/笔记/" style="font-size: 16.67px;">笔记</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编码转换/" style="font-size: 10px;">编码转换</a> <a href="/tags/编程建议/" style="font-size: 10px;">编程建议</a> <a href="/tags/脚本/" style="font-size: 13.33px;">脚本</a> <a href="/tags/自学/" style="font-size: 10px;">自学</a> <a href="/tags/致新生/" style="font-size: 10px;">致新生</a> <a href="/tags/诗歌/" style="font-size: 13.33px;">诗歌</a> <a href="/tags/资源检索/" style="font-size: 10px;">资源检索</a> <a href="/tags/闲情逸致/" style="font-size: 13.33px;">闲情逸致</a> <a href="/tags/音频解码/" style="font-size: 10px;">音频解码</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">He110</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">He110</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-lamp-install" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/04/lamp-install/" class="article-date">
+  	<time datetime="2017-03-04T12:00:32.000Z" itemprop="datePublished">2017-03-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      LAMP 环境配置
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lamp/">lamp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/环境配置/">环境配置</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/php/">php</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="阅读本文需要的知识"><a href="#阅读本文需要的知识" class="headerlink" title="阅读本文需要的知识"></a>阅读本文需要的知识</h1><ul>
+<li>知道有&nbsp;Linux、Apache、PHP、MySQL&nbsp;这些东西并知道是做什么的</li>
+<li>了解&nbsp;shell&nbsp;是什么并知道如何执行&nbsp;shell</li>
+<li>安装好了&nbsp;Ubuntu&nbsp;虚拟机</li>
+</ul>
+<a id="more"></a>
+<h1 id="安装-Apache"><a href="#安装-Apache" class="headerlink" title="安装 Apache"></a>安装 Apache</h1><p>使用命令&nbsp;<code>sudo apt install apache2</code>&nbsp;直接安装即可，安装后可以使用&nbsp;<code>service apache2 status</code>&nbsp;查看&nbsp;Apache&nbsp;状态，使用&nbsp;<code>service apache2 restart</code>&nbsp;重启&nbsp;Apache，安装完毕可以在浏览器中访问&nbsp;<code>localhost</code>，如果看到如下页面证明安装成功<br><img src="https://raw.githubusercontent.com/He110te4m/img/master/LAMP/1.jpg" alt="Apache 起始页"></p>
+<h1 id="安装-PHP7"><a href="#安装-PHP7" class="headerlink" title="安装 PHP7"></a>安装 PHP7</h1><p>使用命令&nbsp;<code>sudo apt install php7.0</code>，尝试输出版本信息，检测是否安装成功：<code>php7.0 -v</code>，如果出现<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">PHP 7.0.4-7ubuntu2.1 (cli) ( NTS )</div><div class="line">Copyright (c) 1997-2016 The PHP Group</div><div class="line">Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies</div><div class="line">with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2016, by Zend Technologies</div></pre></td></tr></table></figure></p>
+<p>如果出现以上信息，则证明安装&nbsp;<code>php7.0</code>&nbsp;成功，接下来就是整合&nbsp;PHP&nbsp;和&nbsp;Apache，输入命令：<code>sudo apt install libapache2-mod-php7.0</code></p>
+<h1 id="安装-MySQL"><a href="#安装-MySQL" class="headerlink" title="安装 MySQL"></a>安装 MySQL</h1><p>使用命令&nbsp;<code>sudo apt-get install mysql-server</code>，在安装过程中会要求设置密码，这个密码是登陆&nbsp;MySQL&nbsp;用的，要记住，安装完成后可以使用命令&nbsp;<code>mysql -u root -p</code>&nbsp;进入&nbsp;MySQL(需要输入密码后才能进入&nbsp;MySQL)，接下来就可以操作&nbsp;MySQL&nbsp;了</p>
+<p>安装完&nbsp;MySQL&nbsp;后就是整合&nbsp;MySQL&nbsp;和&nbsp;PHP&nbsp;了，输入命令：<code>sudo apt-get install php7.0-mysql</code></p>
+<h1 id="重启-MySQL-和-Apache"><a href="#重启-MySQL-和-Apache" class="headerlink" title="重启 MySQL 和 Apache"></a>重启 MySQL 和 Apache</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo service mysql restart</div><div class="line">sudo service apache2 restart</div></pre></td></tr></table></figure>
+<h1 id="安装-PHPMyAdmin"><a href="#安装-PHPMyAdmin" class="headerlink" title="安装 PHPMyAdmin"></a>安装 PHPMyAdmin</h1><p>使用命令&nbsp;<code>sudo apt-get install phpmyadmin php-mbstring php-gettext</code>，安装过程中选择&nbsp;<code>apache2</code></p>
+<p>安装完需要修改支持模块：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo phpenmod mcrypt</div><div class="line">sudo phpenmod mbstring</div></pre></td></tr></table></figure></p>
+<p>修改完成后，使用&nbsp;<code>sudo systemctl restart apache2</code>&nbsp;重启&nbsp;Apache&nbsp;服务器，然后输入&nbsp;<code>http://localhost/phpmyadmin</code>&nbsp;查看是否安装成功</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>可以看出，LAMP&nbsp;不愧是&nbsp;PHP&nbsp;的最佳运行环境，配置比&nbsp;WAMP&nbsp;简单多了，各种命令直接安装即可，十分简单</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/07/mysql-charset/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          Ubuntu16 中的 MySQL 默认编码修改
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/02/28/SSL/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP 网站中 HTTPS 的理解和配置</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="lamp-install" data-title="LAMP 环境配置" data-url="https://www.he110.top/2017/03/04/lamp-install/"  data-images="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" data-content="LAMP 环境配置">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2017 He110
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

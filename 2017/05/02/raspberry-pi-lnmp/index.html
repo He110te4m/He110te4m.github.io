@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>树莓派搭建 lnmp 环境并映射外网 | He110&#39;s Blog</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="树莓派不愧是性价比极高的玩具，不高的价格却能玩出花来~本文仅用来搭建 LNMP 开发环境并映射到外网~">
+<meta name="keywords" content="Linux,树莓派,Debian">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派搭建 lnmp 环境并映射外网">
+<meta property="og:url" content="https://www.he110.top/2017/05/02/raspberry-pi-lnmp/index.html">
+<meta property="og:site_name" content="He110&#39;s Blog">
+<meta property="og:description" content="树莓派不愧是性价比极高的玩具，不高的价格却能玩出花来~本文仅用来搭建 LNMP 开发环境并映射到外网~">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-06-20T02:17:15.850Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="树莓派搭建 lnmp 环境并映射外网">
+<meta name="twitter:description" content="树莓派不愧是性价比极高的玩具，不高的价格却能玩出花来~本文仅用来搭建 LNMP 开发环境并映射到外网~">
+  
+    <link rel="alternative" href="/atom.xml" title="He110&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">He110</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Blog/" style="font-size: 13.33px;">Blog</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Debian/" style="font-size: 10px;">Debian</a> <a href="/tags/GithubPages/" style="font-size: 10px;">GithubPages</a> <a href="/tags/ICO/" style="font-size: 10px;">ICO</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/lamp/" style="font-size: 10px;">lamp</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/rewrite/" style="font-size: 10px;">rewrite</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/wamp/" style="font-size: 10px;">wamp</a> <a href="/tags/一键评教/" style="font-size: 10px;">一键评教</a> <a href="/tags/优惠/" style="font-size: 10px;">优惠</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/公益/" style="font-size: 10px;">公益</a> <a href="/tags/取随机数/" style="font-size: 10px;">取随机数</a> <a href="/tags/后台接口/" style="font-size: 10px;">后台接口</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/学生/" style="font-size: 10px;">学生</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a> <a href="/tags/感悟/" style="font-size: 10px;">感悟</a> <a href="/tags/教务系统/" style="font-size: 10px;">教务系统</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/校园网/" style="font-size: 10px;">校园网</a> <a href="/tags/正方/" style="font-size: 10px;">正方</a> <a href="/tags/油猴脚本/" style="font-size: 10px;">油猴脚本</a> <a href="/tags/环境配置/" style="font-size: 13.33px;">环境配置</a> <a href="/tags/电信/" style="font-size: 10px;">电信</a> <a href="/tags/破解/" style="font-size: 10px;">破解</a> <a href="/tags/笔记/" style="font-size: 16.67px;">笔记</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编码转换/" style="font-size: 10px;">编码转换</a> <a href="/tags/编程建议/" style="font-size: 10px;">编程建议</a> <a href="/tags/脚本/" style="font-size: 13.33px;">脚本</a> <a href="/tags/自学/" style="font-size: 10px;">自学</a> <a href="/tags/致新生/" style="font-size: 10px;">致新生</a> <a href="/tags/诗歌/" style="font-size: 13.33px;">诗歌</a> <a href="/tags/资源检索/" style="font-size: 10px;">资源检索</a> <a href="/tags/闲情逸致/" style="font-size: 13.33px;">闲情逸致</a> <a href="/tags/音频解码/" style="font-size: 10px;">音频解码</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">He110</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">He110</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-raspberry-pi-lnmp" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/02/raspberry-pi-lnmp/" class="article-date">
+  	<time datetime="2017-05-02T13:46:56.000Z" itemprop="datePublished">2017-05-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      树莓派搭建 lnmp 环境并映射外网
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/树莓派/">树莓派</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/树莓派/">树莓派</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>需要的物品比较多&nbsp;(相对于之前有台电脑就能搭环境来说~)，以下是清单</p>
+<ul>
+<li>树莓派一只&nbsp;(我用的是树莓派三代&nbsp;B&nbsp;型)</li>
+<li>连接了&nbsp;WIFI&nbsp;并有有线网卡的电脑&nbsp;/&nbsp;笔记本一台&nbsp;(我使用的是&nbsp;Win7&nbsp;64&nbsp;位操作系统)</li>
+<li>网线一条，没有的话拿电话线~&nbsp;(用于连接树莓派)</li>
+<li>安卓充电器&nbsp;+&nbsp;USB&nbsp;数据线&nbsp;(用于给树莓派供电)</li>
+<li>支持&nbsp;SSH&nbsp;连接的软件，我使用的是&nbsp;PuTTY</li>
+</ul>
+<a id="more"></a>
+<h1 id="安装树莓派系统"><a href="#安装树莓派系统" class="headerlink" title="安装树莓派系统"></a>安装树莓派系统</h1><p>这个网上的教程很多，就不赘述了，官网的讲解也很清楚</p>
+<h1 id="连接树莓派"><a href="#连接树莓派" class="headerlink" title="连接树莓派"></a>连接树莓派</h1><ol>
+<li>首先用网线连接电脑和树莓派，然后打开&nbsp;网络和共享中心——更改适配器设置&nbsp;(直接右键无线网络的信号区域即可找到网络和共享中心)</li>
+<li>设置无线网卡的属性——共享，选中“允许其他网络用户通过此计算机的&nbsp;Internet&nbsp;连接来连接”&nbsp;(如果安装了&nbsp;<code>VMware</code>&nbsp;的用户最好将&nbsp;VMware&nbsp;的虚拟网卡禁用，仅留有线网卡和无线网卡，防止干扰)，这样树莓派的&nbsp;IP&nbsp;地址就会变为：<code>192.168.137.226</code>&nbsp;了</li>
+<li>使用&nbsp;PuTTY&nbsp;连接上树莓派，输入账号密码登陆</li>
+</ol>
+<h1 id="树莓派连接无线网络"><a href="#树莓派连接无线网络" class="headerlink" title="树莓派连接无线网络"></a>树莓派连接无线网络</h1><ol>
+<li>使用&nbsp;VI&nbsp;神器，修改&nbsp;<code>/etc/network/interfaces</code>&nbsp;这个文件，修改以下内容<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">iface wlan0 inet manual</div><div class="line">wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>修改为如下代码：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">iface wlan0 inet dhcp</div><div class="line">wpa_conf /etc/wpa_supplicant/wpa_supplicant.conf</div></pre></td></tr></table></figure></p>
+<p>如果你的文件不是以上的样子而是这种的：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">iface wlan0 inet dhcp</div><div class="line">wpa-ssid <span class="string">"WiFi-name"</span></div><div class="line">wpa-psk <span class="string">"WiFi-password"</span></div></pre></td></tr></table></figure></p>
+<p>也修改为：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">iface wlan0 inet dhcp</div><div class="line">wpa_conf /etc/wpa_supplicant/wpa_supplicant.conf</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>接下来就是修改&nbsp;<code>/etc/wpa_supplicant/wpa_supplicant.conf</code>&nbsp;了，直接将以下代码添加在文件中即可，注意不要删除任何行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 最常用的配置。WPA-PSK 加密方式。</span></div><div class="line">network=&#123;</div><div class="line">    <span class="comment"># 设置 WIFI 名</span></div><div class="line">    ssid=<span class="string">"WiFi-name1"</span></div><div class="line">    <span class="comment"># 设置 WIFI 密码</span></div><div class="line">    psk=<span class="string">"WiFi-password1"</span></div><div class="line">    <span class="comment"># 设置 WIFI 优先级，数字越大越先连接，不能为负</span></div><div class="line">    priority=5</div><div class="line">&#125;</div><div class="line"></div><div class="line">network=&#123;</div><div class="line">    <span class="comment"># 设置 WIFI 名</span></div><div class="line">    ssid=<span class="string">"WiFi-name2"</span></div><div class="line">    <span class="comment"># 设置 WIFI 密码</span></div><div class="line">    psk=<span class="string">"WiFi-password2"</span></div><div class="line">    <span class="comment"># 设置 WIFI 优先级</span></div><div class="line">    priority=4</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>开始连接 WIFI，在&nbsp;ssh&nbsp;中输入以下指令：<code>sudo ifup wlan0</code>，如果没有输出&nbsp;error&nbsp;的话即配置完成，可以通过&nbsp;<code>ifconfig</code>&nbsp;命令查看树莓派&nbsp;IP，如果需要断开则输入：<code>sudo ifdown wlan0</code>&nbsp;<strong>千万不要在网络连接ssh时候执行这条命令，它会直接断开你的ssh连接</strong></p>
+</li>
+</ol>
+<h1 id="搭建-lnmp-环境"><a href="#搭建-lnmp-环境" class="headerlink" title="搭建 lnmp 环境"></a>搭建 lnmp 环境</h1><ol>
+<li>第一步当然是先更新软件和系统了，输入：<code>sudo apt-get update</code>&nbsp;和&nbsp;<code>sudo apt-get upgrade</code></li>
+<li>接下来安装&nbsp;lnmp&nbsp;组件，使用命令：<code>sudo apt-get install nginx php5-fpm php5-cgi php5-cli php5-curl php5-gd php5-mcrypt php5-mysql php5-memcache php5-gd php5-sqlite php5-cgi php5-xmlrpc mysql-server mysql-client -y</code>，其中&nbsp;nginx&nbsp;是作为服务器软件使用的&nbsp;(就是开放&nbsp;80&nbsp;端口的软件)，含有&nbsp;<code>PHP</code>、<code>MySQL</code>&nbsp;字样的就是&nbsp;PHP&nbsp;和&nbsp;MySQL&nbsp;了</li>
+<li>打开树莓派的&nbsp;IP&nbsp;地址，如果看到&nbsp;Nginx&nbsp;的初始页面代表安装完成&nbsp;(初始页的样子？不是提示找不到网页就是初始页~)</li>
+<li>查看&nbsp;Nginx&nbsp;版本：<code>nginx -v</code>，如果使用的是&nbsp;1.2X&nbsp;版的，直接使用默认配置文件即可，无需修改，否则需要修改配置文件</li>
+</ol>
+<h1 id="安装-phpMyAdmin"><a href="#安装-phpMyAdmin" class="headerlink" title="安装 phpMyAdmin"></a>安装 phpMyAdmin</h1><ul>
+<li>直接执行&nbsp;<code>sudo apt-get install phpmyadmin -y</code>&nbsp;即可，等待安装完成</li>
+<li>将&nbsp;phpMyAdmin&nbsp;映射到网站根目录：<code>sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin</code></li>
+<li>修改访问权限：<code>sudo chmod -R 777 /var/www/html</code></li>
+<li><p>重启相关文件使配置生效：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo php5enmod mcrypt</div><div class="line">sudo service php5-fpm restart</div><div class="line">service nginx restart</div></pre></td></tr></table></figure>
+</li>
+<li><p>Tip：如果此时打开&nbsp;<code>http://树莓派IP</code>&nbsp;显示的是空白页，则进行下一步站点配置，否则不需要配置</p>
+</li>
+</ul>
+<h1 id="修改-Nginx-站点配置"><a href="#修改-Nginx-站点配置" class="headerlink" title="修改 Nginx 站点配置"></a>修改 Nginx 站点配置</h1><p>Nginx&nbsp;的全局配置文件是：<code>/etc/nginx/nginx.conf</code>，但是千万在不了解的时候去动这个文件，那时在给以后的自己挖坑~</p>
+<p>nginx&nbsp;有针对每一个网站的配置文件，在这个文件下面的配置，跟在全局配置是一样的。这些文件存放在&nbsp;<code>/etc/nginx/sites-available/</code>，如果想启用他们，就在隔壁文件夹&nbsp;<code>/etc/nginx/sites-enable/</code>&nbsp;建立一个链接文件，然后就可以启用了。</p>
+<p><code>/etc/nginx/sites-enable</code>&nbsp;下默认已经有了一个链接到&nbsp;<code>default</code>&nbsp;的文件。所以我们可以直接修改或者重写&nbsp;<code>/etc/nginx/sites-available/default</code>&nbsp;来配置我们的站点。</p>
+<p><strong>请注意：按照这样的配置将使程序的 Nginx.conf 配置文件失效</strong></p>
+<ol>
+<li>先备份这个文件，防止出错：<code>sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.backup</code></li>
+<li><p>将原文件删除，再创建一个新的同名文件，内容如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    <span class="comment"># 设置监听端口</span></div><div class="line">    listen 80 default_server;</div><div class="line">    <span class="comment"># 设置网站根目录</span></div><div class="line">    root /var/www/html;</div><div class="line">    <span class="comment"># 设置默认首页</span></div><div class="line">    index index.html index.htm index.php;</div><div class="line"></div><div class="line">    <span class="comment"># 修改网站域名</span></div><div class="line">    server_name he110.top;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        <span class="comment"># 修改为自己的 Nginx 规则，我这里使用的是 He110php 框架的 Nginx 配置，地址：https://github.com/He110te4m/He110PHP</span></div><div class="line">        <span class="keyword">if</span> (!-e <span class="variable">$request_filename</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="comment"># 如果访问的文件不存在，则修改 URL 为 server_name/index.php?url=参数</span></div><div class="line">            rewrite ^/(.*)$ /index.php?url=<span class="variable">$1</span> last;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    location ~ .*\.php(\/.*)*$ &#123;</div><div class="line">        fastcgi_split_path_info ^(.+\.php)(/.+)$;</div><div class="line">        fastcgi_pass unix:/var/run/php5-fpm.sock;</div><div class="line">        fastcgi_index index.php;</div><div class="line">        include fastcgi.conf;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>重启&nbsp;Nginx&nbsp;使配置文件生效，这样就配置完成了</p>
+</li>
+</ol>
+<h1 id="配置外网映射"><a href="#配置外网映射" class="headerlink" title="配置外网映射"></a>配置外网映射</h1><p>由于国内的花生壳贼坑，说好免费但是还是要收费，并且很不稳定，还需要电脑一直开机，虽然有花生棒，但是这样一来映射的费用都赶上树莓派了，显然不是首选，故而去&nbsp;Google&nbsp;逛了一圈，发现了&nbsp;Ngrok&nbsp;神器，免费&nbsp;+&nbsp;开源，由于自己搭建&nbsp;Ngrok&nbsp;需要有&nbsp;VPS，故而选用了别人搭建好的免费&nbsp;Ngrok&nbsp;服务器，以下则以&nbsp;Ngrok.cc&nbsp;为例说明&nbsp;Ngrok&nbsp;的使用</p>
+<ol>
+<li>给树莓派分配静态&nbsp;IP，如果是使用树莓派连接路由器的话直接使用路由器管理界面自带的静态&nbsp;IP绑定&nbsp;(或者是&nbsp;IP&nbsp;MAC&nbsp;绑定)，为树莓派分配好静态&nbsp;IP</li>
+<li>登陆&nbsp;Ngrok，在后台开通隧道，不会开通可以参考<a href="http://www.sunnyos.com/article-show-67.html" target="_blank" rel="external">官方教程</a>，有视频演示</li>
+<li><p>在树莓派中下载&nbsp;Linux&nbsp;ARM&nbsp;客户端：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /home/pi/Desktop</div><div class="line">sudo wget http://hls.ctopus.com/sunny/linux_arm.zip</div></pre></td></tr></table></figure>
+</li>
+<li><p>解压到当前文件夹：<code>unzip linux_arm.zip</code></p>
+</li>
+<li><p>将文件移到桌面并删除原文件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo mv linux_arm/sunny sunny</div><div class="line">sudo rm -rf linux_arm*</div></pre></td></tr></table></figure>
+</li>
+<li><p>添加&nbsp;ssh&nbsp;脚本文件&nbsp;<code>ngrok.sh</code>，并添加以下内容：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 此处更改为你自己的 Ngrok 客户端的文件路径</span></div><div class="line"><span class="built_in">cd</span> /home/pi/Desktop</div><div class="line"><span class="comment"># 添加自己的 ID，多个 ID 用逗号（半角）隔开</span></div><div class="line">nohup ./sunny clientid 你的隧道ID &gt;/dev/null 2&gt;&amp;1</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改文件权限：<code>sudo chmod 777 /home/pi/Desktop/ngrok.sh</code></p>
+</li>
+<li>打开&nbsp;<code>/etc/rc.local</code>，里面存放的是开机自动启动的脚本，在&nbsp;<code>exit 0</code>&nbsp;前添加这句代码：<code>/home/pi/Desktop/ngrok.sh start</code></li>
+<li>重启树莓派，查看是否自启，如果不能，检查是否大小写拼错~</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>果然是生命在于折腾，配置环境折腾了&nbsp;3&nbsp;天，配置外网映射又是&nbsp;3&nbsp;天，故记录配置方法给有需要的人~</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/07/markdown/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          markdown 参考手册
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/19/ajax/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">AJAX 学习笔记</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="raspberry-pi-lnmp" data-title="树莓派搭建 lnmp 环境并映射外网" data-url="https://www.he110.top/2017/05/02/raspberry-pi-lnmp/"  data-images="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" data-content="树莓派搭建 lnmp 环境并映射外网">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2017 He110
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>正方教务系统一键评教脚本的实现 | He110&#39;s Blog</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="烦透的正方，非得找麻烦。忽然想到一位破解界前辈说过的，很多时候，破解是为了抵制那些垃圾产品经理设计的垃圾需求，现在深有同感">
+<meta name="keywords" content="脚本,正方,教务系统,一键评教,JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正方教务系统一键评教脚本的实现">
+<meta property="og:url" content="https://www.he110.top/2017/06/08/一键评教/index.html">
+<meta property="og:site_name" content="He110&#39;s Blog">
+<meta property="og:description" content="烦透的正方，非得找麻烦。忽然想到一位破解界前辈说过的，很多时候，破解是为了抵制那些垃圾产品经理设计的垃圾需求，现在深有同感">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-06-21T08:14:14.387Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="正方教务系统一键评教脚本的实现">
+<meta name="twitter:description" content="烦透的正方，非得找麻烦。忽然想到一位破解界前辈说过的，很多时候，破解是为了抵制那些垃圾产品经理设计的垃圾需求，现在深有同感">
+  
+    <link rel="alternative" href="/atom.xml" title="He110&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">He110</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Blog/" style="font-size: 13.33px;">Blog</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Debian/" style="font-size: 10px;">Debian</a> <a href="/tags/GithubPages/" style="font-size: 10px;">GithubPages</a> <a href="/tags/ICO/" style="font-size: 10px;">ICO</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/lamp/" style="font-size: 10px;">lamp</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/rewrite/" style="font-size: 10px;">rewrite</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/wamp/" style="font-size: 10px;">wamp</a> <a href="/tags/一键评教/" style="font-size: 10px;">一键评教</a> <a href="/tags/优惠/" style="font-size: 10px;">优惠</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/公益/" style="font-size: 10px;">公益</a> <a href="/tags/取随机数/" style="font-size: 10px;">取随机数</a> <a href="/tags/后台接口/" style="font-size: 10px;">后台接口</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/学生/" style="font-size: 10px;">学生</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a> <a href="/tags/感悟/" style="font-size: 10px;">感悟</a> <a href="/tags/教务系统/" style="font-size: 10px;">教务系统</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/校园网/" style="font-size: 10px;">校园网</a> <a href="/tags/正方/" style="font-size: 10px;">正方</a> <a href="/tags/油猴脚本/" style="font-size: 10px;">油猴脚本</a> <a href="/tags/环境配置/" style="font-size: 13.33px;">环境配置</a> <a href="/tags/电信/" style="font-size: 10px;">电信</a> <a href="/tags/破解/" style="font-size: 10px;">破解</a> <a href="/tags/笔记/" style="font-size: 16.67px;">笔记</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编码转换/" style="font-size: 10px;">编码转换</a> <a href="/tags/编程建议/" style="font-size: 10px;">编程建议</a> <a href="/tags/脚本/" style="font-size: 13.33px;">脚本</a> <a href="/tags/自学/" style="font-size: 10px;">自学</a> <a href="/tags/致新生/" style="font-size: 10px;">致新生</a> <a href="/tags/诗歌/" style="font-size: 13.33px;">诗歌</a> <a href="/tags/资源检索/" style="font-size: 10px;">资源检索</a> <a href="/tags/闲情逸致/" style="font-size: 13.33px;">闲情逸致</a> <a href="/tags/音频解码/" style="font-size: 10px;">音频解码</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">He110</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">He110</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-一键评教" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/06/08/一键评教/" class="article-date">
+  	<time datetime="2017-06-08T07:01:17.000Z" itemprop="datePublished">2017-06-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      正方教务系统一键评教脚本的实现
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/一键评教/">一键评教</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教务系统/">教务系统</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正方/">正方</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/脚本/">脚本</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/other/">other</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>烦透的正方，非得找麻烦。<br>忽然想到一位破解界前辈说过的，很多时候，破解是为了抵制那些垃圾产品经理设计的垃圾需求，现在深有同感</p>
+<a id="more"></a>
+<p>评教有什么用？集体评这个老师不好就能不给他教了吗？不，还是一样，该怎么样就怎么样，存在的唯一理由，就是为了给领导看</p>
+<h1 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h1><p>本教程并不是为了破解而破解，纯粹属于最近心情不好，正方恰巧撞枪口罢了，以前直接使用火狐评教，直接使用 tab 键切换到下一个下拉框，可以节省很多时间，而且不容易被查出来，而最近挺烦躁的，所以也不想再这么搞下去了，故编写了一个脚本用于一键评教</p>
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>其实有两种方法：</p>
+<p>第一种就是改包发包到服务器，直接越过正方的评教界面，但是容易被查出来，并且数据包修改不好修改，一个不好容易被发现，并且不适合零基础的人群使用，故暂且不提</p>
+<p>第二种便是模拟人为操作的过程，原理其实很简单，稍微分析一下，评教需要做的，就是修改下拉框的值，然后点击一个按钮，循环这个过程，直到所有的课程评教完成即可，那么首先要解决的是评教次数的问题，在正方的评教系统中有一个下拉框是用于显示评教涉及的课程的，包括了评教的和未评教的，故而可以使用 JS 脚本直接获取这个下拉框的下拉选项数，作为循环次数，也就是：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> li = <span class="built_in">document</span>.querySelectorAll(<span class="string">"ul.nav&gt;li.top"</span>)[<span class="number">3</span>].querySelectorAll(<span class="string">"ul.sub&gt;li"</span>).length;</div></pre></td></tr></table></figure></p>
+<p>这句语句就是获取循环次数，也就是课程数的，每次循环的时候将 <code>li</code> 减一即可</p>
+<p>接下来是获取评教中每个课程的所有的下拉框，原本以为会是 AJAX，那样就比较复杂了，没想到是 iframe 窗体，容易多了，只需要编写一套适用每个课程评教界面的 DOM 操作就行了，直接上代码好了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取课程所有的下拉框</span></div><div class="line"><span class="keyword">var</span> selects = iframe.contentDocument.querySelectorAll(<span class="string">'table.datelist&gt;tbody&gt;tr&gt;td&gt;select'</span>);</div><div class="line"><span class="comment">// 将下拉框的 Index 全部置为 1 也就是评价为 B</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; selects.length; i++) &#123;</div><div class="line">    <span class="comment">// 索引为 1 表示为 B，可选值为：0: A，1: B，2: C，3: D...具体看教务系统给多少个等级</span></div><div class="line">    selects[i].selectedIndex = <span class="number">1</span></div><div class="line">&#125;</div><div class="line"><span class="comment">// 取一个随机数 index，第 index 个下拉框评价等级修改为 C，避免全部选项相同无法提交</span></div><div class="line"><span class="keyword">var</span> index = <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random() * (selects.length - <span class="number">1</span>));</div><div class="line">selects[index].selectedIndex = <span class="number">2</span>;</div><div class="line"><span class="comment">// 写评语，可以改为使用随机值的，我比较懒就使用了固定的</span></div><div class="line">iframe.contentDocument.getElementById(<span class="string">"pjxx"</span>).value = <span class="string">'老师很认真负责'</span>;</div><div class="line"><span class="comment">// 模拟点击保存按钮</span></div><div class="line">iframe.contentDocument.getElementById(<span class="string">"Button1"</span>).click();</div></pre></td></tr></table></figure>
+<h1 id="完整的代码"><a href="#完整的代码" class="headerlink" title="完整的代码"></a>完整的代码</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取相关资源</span></div><div class="line"><span class="keyword">var</span> iframe = <span class="built_in">document</span>.querySelector(<span class="string">'iframe'</span>);</div><div class="line"><span class="comment">// 总共需要评教的课程数</span></div><div class="line"><span class="keyword">var</span> li = <span class="built_in">document</span>.querySelectorAll(<span class="string">"ul.nav&gt;li.top"</span>)[<span class="number">3</span>].querySelectorAll(<span class="string">"ul.sub&gt;li"</span>).length;</div><div class="line"><span class="comment">// 信号量/许可证</span></div><div class="line">status = <span class="literal">false</span>;</div><div class="line"><span class="comment">// 评教函数定义</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">pj</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 判断是否正在执行评教脚本，是则退出，因为重复执行有可能会出 BUG，有的课程评教不全，也就是只修改了部分下拉框，就被提交了</span></div><div class="line">    <span class="keyword">if</span> (status) &#123;</div><div class="line">        <span class="comment">// 结束脚本</span></div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 修改标志位，相当于多线程许可证，或者是信号量一般，让脚步互斥执行</span></div><div class="line">    status = <span class="literal">true</span>;</div><div class="line">    <span class="comment">// 判断是否需要评教，不需要则弹出提示框表示评教完成</span></div><div class="line">    <span class="keyword">if</span> (li == <span class="number">0</span>) &#123;</div><div class="line">        iframe.setAttribute(<span class="string">'onload'</span>, <span class="string">"javascript:dyniframesize('iframeautoheight');"</span>);</div><div class="line">        <span class="comment">// 模拟点击提交按钮</span></div><div class="line">        iframe.contentDocument.getElementById(<span class="string">"Button2"</span>).click();</div><div class="line">        <span class="comment">// 提示完成评教</span></div><div class="line">        alert(<span class="string">"done"</span>);</div><div class="line">        <span class="comment">// 结束脚本</span></div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 获取课程所有的下拉框</span></div><div class="line">    <span class="keyword">var</span> selects = iframe.contentDocument.querySelectorAll(<span class="string">'table.datelist&gt;tbody&gt;tr&gt;td&gt;select'</span>);</div><div class="line">    <span class="comment">// 将下拉框的 Index 全部置为 1 也就是评价为 B</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; selects.length; i++) &#123;</div><div class="line">        <span class="comment">// 索引为 1 表示为 B，可选值为：0: A，1: B，2: C，3: D...具体看教务系统给多少个等级</span></div><div class="line">        selects[i].selectedIndex = <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 取一个随机数 index，第 index 个下拉框评价等级修改为 C，避免全部选项相同无法提交</span></div><div class="line">    <span class="keyword">var</span> index = <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random() * (selects.length - <span class="number">1</span>));</div><div class="line">    <span class="comment">// 修改下拉框，避免所有下拉框的值都相同导致无法保存</span></div><div class="line">    selects[index].selectedIndex = <span class="number">2</span>;</div><div class="line">    <span class="comment">// 写评语，可以改为使用随机值的，我比较懒就使用了固定的</span></div><div class="line">    iframe.contentDocument.getElementById(<span class="string">"pjxx"</span>).value = <span class="string">'老师很认真负责'</span>;</div><div class="line">    <span class="comment">// 模拟点击保存按钮</span></div><div class="line">    iframe.contentDocument.getElementById(<span class="string">"Button1"</span>).click();</div><div class="line">    <span class="comment">// 循环变量 -1</span></div><div class="line">    --li;</div><div class="line">    <span class="comment">// 设置脚本运行结束，可以再次执行脚本</span></div><div class="line">    status = <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line">iframe.setAttribute(<span class="string">'onload'</span>, <span class="string">"javascript:dyniframesize('iframeautoheight'); pj();"</span>);</div><div class="line"></div><div class="line"><span class="comment">// 开始评教</span></div><div class="line">pj();</div></pre></td></tr></table></figure>
+<p>直接打开控制台(按 F12 或者点击开发者工具，选择控制台)，将完整代码粘贴进去，点击执行即可，Chrome 下测试成功，欢迎反馈 BUG，目前已知的 BUG 如下：</p>
+<ul>
+<li>如果评教过程出错，还是会继续执行，缺少检错机制，但是出现错误的情况极少，故不继续添加检错机制，避免代码过于臃肿</li>
+<li>评语每次都一样，容易被查出来，可以使用随机语录，制作中…</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>原理容易想到，但是在实现过程也是碰了不少的坑，主要还是对 JS 不了解，以后可能出个 PHP 版本的，毕竟我还自认是个 PHPer~PHP 是最好的语言~</p>
+<h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>原本的代码有点问题，存在浏览器兼容问题，故修改如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.querySelector(<span class="string">'iframe'</span>);</div><div class="line"><span class="keyword">var</span> c = <span class="built_in">document</span>.querySelectorAll(<span class="string">"ul.nav&gt;li.top"</span>)[<span class="number">3</span>].querySelectorAll(<span class="string">"ul.sub&gt;li"</span>).length;</div><div class="line">status = <span class="literal">false</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (status == <span class="string">"true"</span>) <span class="keyword">return</span>;</div><div class="line">    status = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">if</span> (c == <span class="number">0</span>) &#123;</div><div class="line">        a.setAttribute(<span class="string">'onload'</span>, <span class="string">"javascript:dyniframesize('iframeautoheight');"</span>);</div><div class="line">        a.contentDocument.getElementById(<span class="string">"Button2"</span>).click();</div><div class="line">        alert(<span class="string">"done"</span>);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> selects = a.contentDocument.querySelectorAll(<span class="string">'table.datelist&gt;tbody&gt;tr&gt;td&gt;select'</span>);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; selects.length; i++) &#123;</div><div class="line">        selects[i].selectedIndex = <span class="number">1</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> index = <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random() * (selects.length - <span class="number">1</span>));</div><div class="line">    a.contentDocument.getElementById(<span class="string">"pjxx"</span>).value = <span class="string">'非常好，谢谢老师'</span>;</div><div class="line">    selects[index].selectedIndex = <span class="number">2</span>;</div><div class="line">    a.contentDocument.getElementById(<span class="string">"Button1"</span>).click();</div><div class="line">    c--;</div><div class="line">    status = <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line">a.setAttribute(<span class="string">'onload'</span>, <span class="string">"javascript:dyniframesize('iframeautoheight');b();"</span>);</div><div class="line">b();</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/06/11/student/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          学生优惠权益 List
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/20/day/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">生活随感</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="一键评教" data-title="正方教务系统一键评教脚本的实现" data-url="https://www.he110.top/2017/06/08/一键评教/"  data-images="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" data-content="正方教务系统一键评教脚本的实现">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2017 He110
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

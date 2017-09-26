@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>AJAX 学习笔记 | He110&#39;s Blog</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="传说中的局部刷新技术~也没有想象中困难~">
+<meta name="keywords" content="php,笔记,ajax">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AJAX 学习笔记">
+<meta property="og:url" content="https://www.he110.top/2017/03/19/ajax/index.html">
+<meta property="og:site_name" content="He110&#39;s Blog">
+<meta property="og:description" content="传说中的局部刷新技术~也没有想象中困难~">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-06-20T02:16:40.803Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AJAX 学习笔记">
+<meta name="twitter:description" content="传说中的局部刷新技术~也没有想象中困难~">
+  
+    <link rel="alternative" href="/atom.xml" title="He110&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+
+  <script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">He110</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Blog/" style="font-size: 13.33px;">Blog</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Debian/" style="font-size: 10px;">Debian</a> <a href="/tags/GithubPages/" style="font-size: 10px;">GithubPages</a> <a href="/tags/ICO/" style="font-size: 10px;">ICO</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/lamp/" style="font-size: 10px;">lamp</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/rewrite/" style="font-size: 10px;">rewrite</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a> <a href="/tags/wamp/" style="font-size: 10px;">wamp</a> <a href="/tags/一键评教/" style="font-size: 10px;">一键评教</a> <a href="/tags/优惠/" style="font-size: 10px;">优惠</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/公益/" style="font-size: 10px;">公益</a> <a href="/tags/取随机数/" style="font-size: 10px;">取随机数</a> <a href="/tags/后台接口/" style="font-size: 10px;">后台接口</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/学生/" style="font-size: 10px;">学生</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a> <a href="/tags/感悟/" style="font-size: 10px;">感悟</a> <a href="/tags/教务系统/" style="font-size: 10px;">教务系统</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/校园网/" style="font-size: 10px;">校园网</a> <a href="/tags/正方/" style="font-size: 10px;">正方</a> <a href="/tags/油猴脚本/" style="font-size: 10px;">油猴脚本</a> <a href="/tags/环境配置/" style="font-size: 13.33px;">环境配置</a> <a href="/tags/电信/" style="font-size: 10px;">电信</a> <a href="/tags/破解/" style="font-size: 10px;">破解</a> <a href="/tags/笔记/" style="font-size: 16.67px;">笔记</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编码转换/" style="font-size: 10px;">编码转换</a> <a href="/tags/编程建议/" style="font-size: 10px;">编程建议</a> <a href="/tags/脚本/" style="font-size: 13.33px;">脚本</a> <a href="/tags/自学/" style="font-size: 10px;">自学</a> <a href="/tags/致新生/" style="font-size: 10px;">致新生</a> <a href="/tags/诗歌/" style="font-size: 13.33px;">诗歌</a> <a href="/tags/资源检索/" style="font-size: 10px;">资源检索</a> <a href="/tags/闲情逸致/" style="font-size: 13.33px;">闲情逸致</a> <a href="/tags/音频解码/" style="font-size: 10px;">音频解码</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">He110</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">He110</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">手握日月摘星辰，世间无我这般人</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-ajax" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/19/ajax/" class="article-date">
+  	<time datetime="2017-03-19T05:10:56.000Z" itemprop="datePublished">2017-03-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AJAX 学习笔记
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ajax/">ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/php/">php</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="创建-AJAX-对象"><a href="#创建-AJAX-对象" class="headerlink" title="创建 AJAX 对象"></a>创建 AJAX 对象</h1><h2 id="主流浏览器"><a href="#主流浏览器" class="headerlink" title="主流浏览器"></a>主流浏览器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h2><p>PS：IE7&nbsp;以上版本的浏览器兼容主流浏览器<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// IE6、7</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</div><div class="line"><span class="comment">// IE8、9</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">"Msxml2.XMLHTTP"</span>);</div><div class="line"><span class="comment">// IE10</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">"Msxml2.XMLHTTP.3.0"</span>);</div><div class="line"><span class="comment">// IE11</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">"Msxml2.XMLHTTP.5.0"</span>);</div><div class="line"><span class="comment">// 最终版 AJAX</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">"Msxml2.XMLHTTP.6.0"</span>);</div></pre></td></tr></table></figure></p>
+<h1 id="使用-AJAX-发送一个-GET-请求"><a href="#使用-AJAX-发送一个-GET-请求" class="headerlink" title="使用 AJAX 发送一个 GET 请求"></a>使用 AJAX 发送一个 GET 请求</h1><h2 id="1-创建-AJAX-对象"><a href="#1-创建-AJAX-对象" class="headerlink" title="1. 创建 AJAX 对象"></a>1. 创建 AJAX 对象</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div></pre></td></tr></table></figure>
+<h2 id="2-创建-HTTP-请求"><a href="#2-创建-HTTP-请求" class="headerlink" title="2. 创建 HTTP 请求"></a>2. 创建 HTTP 请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// xhr.open(请求方式get/post, url地址)</span></div><div class="line">xhr.open(<span class="string">'get'</span>, <span class="string">'/index.php'</span>);</div></pre></td></tr></table></figure>
+<h2 id="3-发送请求"><a href="#3-发送请求" class="headerlink" title="3. 发送请求"></a>3. 发送请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// xhr.send(请求内容，如果是 get 则为 NULL，为 POST 则为传递给服务器的信息)</span></div><div class="line">xhr.send(<span class="literal">null</span>);</div></pre></td></tr></table></figure>
+<h1 id="使用-AJAX-接收一个-GET-请求"><a href="#使用-AJAX-接收一个-GET-请求" class="headerlink" title="使用 AJAX 接收一个 GET 请求"></a>使用 AJAX 接收一个 GET 请求</h1><p>AJAX&nbsp;可以接收所有浏览器能够接收的信息，如：字符串、HTML、CSS、XML、json</p>
+<h2 id="1-发送-AJAX-请求"><a href="#1-发送-AJAX-请求" class="headerlink" title="1. 发送 AJAX 请求"></a>1. 发送 AJAX 请求</h2><p>创建一个&nbsp;AJAX&nbsp;对象并发起&nbsp;HTTP&nbsp;请求</p>
+<h2 id="2-接收-AJAX-请求的响应"><a href="#2-接收-AJAX-请求的响应" class="headerlink" title="2. 接收 AJAX 请求的响应"></a>2. 接收 AJAX 请求的响应</h2><p>AJAX&nbsp;发送完请求后，可以调用&nbsp;AJAX&nbsp;对象的&nbsp;<code>responseText</code>&nbsp;属性获取服务器响应的信息&nbsp;(以字符串的形式)，由于网络延迟等等原因，AJAX&nbsp;拥有几个状态如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">readyState 属性的几个值：</div><div class="line">    <span class="number">0</span>：刚创建 AJAX 对象</div><div class="line">    <span class="number">1</span>：已经调用 open 方法</div><div class="line">    <span class="number">2</span>：已经调用 send 方法</div><div class="line">    <span class="number">3</span>：数据返回中，返回部分数据</div><div class="line">    <span class="number">4</span>：请求完成，数据完整返回</div><div class="line">onreadystatechange 事件：当 AJAX 状态 readyState 发生改变时触发，最好再创建 AJAX 对象后就创建事件：</div><div class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// 最多只能获取 1、2、3、4 几个状态</span></div><div class="line">        <span class="keyword">if</span> (xhr.readyState == <span class="number">4</span>) &#123;</div><div class="line">            <span class="comment">// 显示返回的信息</span></div><div class="line">            <span class="built_in">document</span>.getElementById(<span class="string">'result'</span>).innerHTML = xhr.responseText;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<h1 id="GET-请求注意事项"><a href="#GET-请求注意事项" class="headerlink" title="GET 请求注意事项"></a>GET 请求注意事项</h1><p>GET&nbsp;传递时需要对中文、特殊符号进行编码处理，否则会出现异常(部分浏览器能自动编码中文)</p>
+<h2 id="JavaScript-处理"><a href="#JavaScript-处理" class="headerlink" title="JavaScript 处理"></a>JavaScript 处理</h2><p>使用函数：<code>encodeURIComponent()</code>&nbsp;函数进行实体转换</p>
+<h2 id="PHP-处理"><a href="#PHP-处理" class="headerlink" title="PHP 处理"></a>PHP 处理</h2><p>使用函数：<code>urlencode()</code>&nbsp;进行编码，需要使用&nbsp;<code>urldecode()</code>&nbsp;进行解码</p>
+<h1 id="使用-AJAX-发送一个-POST-请求"><a href="#使用-AJAX-发送一个-POST-请求" class="headerlink" title="使用 AJAX 发送一个 POST 请求"></a>使用 AJAX 发送一个 POST 请求</h1><h2 id="1-创建-AJAX-对象-1"><a href="#1-创建-AJAX-对象-1" class="headerlink" title="1. 创建 AJAX 对象"></a>1. 创建 AJAX 对象</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div></pre></td></tr></table></figure>
+<h2 id="2-创建-HTTP-请求-1"><a href="#2-创建-HTTP-请求-1" class="headerlink" title="2. 创建 HTTP 请求"></a>2. 创建 HTTP 请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// xhr.open(请求方式get/post, url地址)</span></div><div class="line">xhr.open(<span class="string">'post'</span>, <span class="string">'/index.php'</span>);</div></pre></td></tr></table></figure>
+<h2 id="3-发送请求-1"><a href="#3-发送请求-1" class="headerlink" title="3. 发送请求"></a>3. 发送请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// xhr.send(请求内容，如果是 get 则为 NULL，为 POST 则为传递给服务器的信息)</span></div><div class="line">xhr.send(<span class="string">"action=123&amp;user=root"</span>);</div></pre></td></tr></table></figure>
+<h1 id="使用-AJAX-接收一个-POST-请求"><a href="#使用-AJAX-接收一个-POST-请求" class="headerlink" title="使用 AJAX 接收一个 POST 请求"></a>使用 AJAX 接收一个 POST 请求</h1><p>需要在调用&nbsp;<code>open()</code>&nbsp;后设置请求头为&nbsp;XML&nbsp;解析：<code>xhr.setRequsetHeader(&quot;content-type&quot;,&quot;application/x-www-form-urlencoded&quot;)</code></p>
+<h1 id="POST-请求注意事项"><a href="#POST-请求注意事项" class="headerlink" title="POST 请求注意事项"></a>POST 请求注意事项</h1><ul>
+<li>给服务器传递数据使用的是&nbsp;<code>send()</code>&nbsp;方法</li>
+<li>调用方法&nbsp;<code>setRequsetHeader()</code>&nbsp;把传递的数组组织为&nbsp;<code>xml</code>格式</li>
+<li>传递中文时不需要编码，但是传递特殊符号时需要</li>
+<li>可以同时传递&nbsp;GET&nbsp;参数信息</li>
+</ul>
+<h1 id="同步请求-异步请求"><a href="#同步请求-异步请求" class="headerlink" title="同步请求/异步请求"></a>同步请求/异步请求</h1><p>使用&nbsp;<code>open()</code>&nbsp;的第三个参数可以指定为同步请求或是异步请求(true&nbsp;为异步，false&nbsp;为同步)</p>
+<h1 id="AJAX-对-XML-的处理"><a href="#AJAX-对-XML-的处理" class="headerlink" title="AJAX 对 XML 的处理"></a>AJAX 对 XML 的处理</h1><p>使用属性：<code>xhr.responseXML</code>&nbsp;属性获取返回&nbsp;XML&nbsp;文档的&nbsp;DOM&nbsp;父节点的上一级结点</p>
+<h1 id="IE-缓存动态页面的处理方法"><a href="#IE-缓存动态页面的处理方法" class="headerlink" title="IE 缓存动态页面的处理方法"></a>IE 缓存动态页面的处理方法</h1><p>IE&nbsp;浏览器会对动态脚本也进行缓存，导致多次请求同一个脚本只会执行一次，有两种方法可以解决：</p>
+<ul>
+<li>给脚本传递一个随机数：<code>&#39;index.php?&#39; + Math.random();</code>，(推荐)</li>
+<li>给浏览器设置&nbsp;<code>header</code>，强制要求不缓存：<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 设置 header 头禁用缓存的 PHP 代码</span></div><div class="line">header(<span class="string">"Cache-Control:no-cache"</span>);</div><div class="line">header(<span class="string">"Pragma:no-cache"</span>);</div><div class="line">header(<span class="string">"Expires:-1"</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="PHP-创建-JSON-对象"><a href="#PHP-创建-JSON-对象" class="headerlink" title="PHP 创建 JSON 对象"></a>PHP 创建 JSON 对象</h1><h2 id="将数组转为-JSON"><a href="#将数组转为-JSON" class="headerlink" title="将数组转为 JSON"></a>将数组转为 JSON</h2><p>使用函数：<code>json_encode(关联数组/索引关联数组);</code>，该函数返回一个&nbsp;JSON&nbsp;对象，当其参数为索引数组时，返回&nbsp;JS&nbsp;数组&nbsp;({“键”:”值”}，JSON&nbsp;对单/双引号敏感)</p>
+<h2 id="将对象转为-JSON"><a href="#将对象转为-JSON" class="headerlink" title="将对象转为 JSON"></a>将对象转为 JSON</h2><p>同样使用函数：<code>json_encode(关联数组/索引关联数组);</code>，转换时只转换成员属性，不转换成员方法({“属性名”:”值”})</p>
+<h1 id="PHP-解析-JOSN-对象"><a href="#PHP-解析-JOSN-对象" class="headerlink" title="PHP 解析 JOSN 对象"></a>PHP 解析 JOSN 对象</h1><h1 id="JSON-转换为对象"><a href="#JSON-转换为对象" class="headerlink" title="JSON 转换为对象"></a>JSON 转换为对象</h1><p>使用函数：<code>json_decode(JSON 字符串);</code>，该函数返回一个对象，包含有成员属性</p>
+<h1 id="JSON-转换为数组"><a href="#JSON-转换为数组" class="headerlink" title="JSON 转换为数组"></a>JSON 转换为数组</h1><p>使用函数：<code>json_decode(JSON 字符串, true);</code>，第二个参数表示是否以数组形式返回，默认为&nbsp;false</p>
+<h1 id="JSON-转化为-JS-对象"><a href="#JSON-转化为-JS-对象" class="headerlink" title="JSON 转化为 JS 对象"></a>JSON 转化为 JS 对象</h1><p>使用&nbsp;<code>eval(字符串);</code>&nbsp;可以运行作为参数的字符串，然后就能取到对象了</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/02/raspberry-pi-lnmp/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          树莓派搭建 lnmp 环境并映射外网
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/07/mysql-charset/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Ubuntu16 中的 MySQL 默认编码修改</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="ajax" data-title="AJAX 学习笔记" data-url="https://www.he110.top/2017/03/19/ajax/"  data-images="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" data-content="AJAX 学习笔记">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2017 He110
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="/js/main.js"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
